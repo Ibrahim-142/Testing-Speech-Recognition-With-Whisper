@@ -1,50 +1,57 @@
-Whisper Urdu Speech Recognition Evaluation
+# Whisper Urdu Speech Recognition Evaluation
 
-This repository evaluates a fine-tuned OpenAI Whisper model for Urdu speech recognition using a processed Common Voice Urdu dataset sourced from Hugging Face. The work focuses on measuring transcription quality using standard ASR evaluation metrics.
+This repository evaluates a **fine-tuned OpenAI Whisper model for Urdu speech recognition** using a processed Common Voice Urdu dataset from Hugging Face. The project focuses on measuring transcription accuracy using standard ASR evaluation metrics and is part of a Final Year Project (FYP).
 
-Dataset
+---
 
-Source: UmarRamzan/common-voice-urdu-processed (Hugging Face)
+## 📂 Dataset
+- **Source:** `UmarRamzan/common-voice-urdu-processed` (Hugging Face)
+- **Language:** Urdu
+- **Split Used:** Test set
 
-Language: Urdu
+---
 
-Split Used: Full test set
+## 🤖 Model
+- **Architecture:** OpenAI Whisper
+- **Type:** Fine-tuned for Urdu
+- **Loaded From:** Hugging Face
 
-Model
+---
 
-Architecture: OpenAI Whisper (fine-tuned for Urdu)
+## 📏 Evaluation Metrics
+The following standard speech recognition metrics were used:
+- **Word Error Rate (WER)**
+- **Character Error Rate (CER)**
 
-Loading Source: Hugging Face pretrained model
+Metrics were computed using the `evaluate` and `jiwer` libraries.
 
-Evaluation Metrics
+---
 
-The model was evaluated using industry-standard speech recognition metrics:
+## 📊 Results
 
-Word Error Rate (WER)
+**Evaluation on Full Test Set:**
 
-Character Error Rate (CER)
-Metrics were computed using the evaluate and jiwer libraries.
+- **Word Error Rate (WER):** 26.76%
+- **Character Error Rate (CER):** 8.83%
 
-Results
+---
 
-📊 Evaluation on Full Test Set
+## 🛠️ Libraries Used
+- `datasets`
+- `evaluate`
+- `jiwer`
+- `numpy`
+- `pandas`
 
-WER: 26.76%
+---
 
-CER: 8.83%
+## ▶️ Usage
+Run the provided Python script to:
+1. Load the Urdu dataset
+2. Perform speech-to-text inference using Whisper
+3. Compute WER and CER scores
 
-Tools & Libraries
+---
 
-datasets
-
-evaluate
-
-jiwer
-
-numpy
-
-pandas
-
-Usage
-
-Run the provided Python script to load the dataset, generate predictions using the Whisper model, and compute WER and CER scores.
+## 🎓 Purpose
+This repository supports the experimental evaluation component of a **Final Year Project (FYP)** focused on Urdu speech recognition and low-resource language modeling.
